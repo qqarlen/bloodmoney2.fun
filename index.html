@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BLOODMONEY 2 – Human Expenditure Program | Play Free in Browser</title>
+    <meta name="description" content="Play BLOODMONEY 2 (Human Expenditure Program) in your browser. A psychological horror simulation mixing suspense, drama, and ethical dilemmas. Care for Harvey Harvington, make choices, and face the consequences.">
+    <link rel="canonical" href="https://bloodmoney2.fun/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BLOODMONEY 2 – Human Expenditure Program">
+    <meta property="og:description" content="Psychological horror simulation. Feed, play, and decide Harvey's fate. Play instantly in your browser.">
+    <meta property="og:url" content="https://bloodmoney2.fun/">
+    <meta property="og:image" content="/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BLOODMONEY 2 – Human Expenditure Program">
+    <meta name="twitter:description" content="Play the browser version now. Two endings, five minigames, and a heavy dose of moral tension.">
+    <meta name="twitter:image" content="/og-image.jpg">
+
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      /* Tailwind config for theming */
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+            },
+            colors: {
+              brand: {
+                50: '#f1eaff',
+                100: '#e6d7ff',
+                200: '#cdb2ff',
+                300: '#b08aff',
+                400: '#9463ff',
+                500: '#7b3dff',
+                600: '#602fe0',
+                700: '#4a25b3',
+                800: '#371c85',
+                900: '#241258'
+              }
+            },
+            boxShadow: {
+              soft: '0 10px 30px -10px rgba(124, 58, 237, 0.35)'
+            },
+            backgroundImage: {
+              grid: 'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0)',
+              glow: 'radial-gradient(60% 50% at 50% 0%, rgba(123, 61, 255, 0.35) 0%, rgba(123, 61, 255, 0.0) 65%)'
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      :root { color-scheme: dark; }
+      html, body { height: 100%; }
+      body { background: #0b0b10; }
+      .noise { position: fixed; inset: 0; pointer-events: none; opacity: .06; mix-blend-mode: soft-light; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="120" height="120" filter="url(%23n)" opacity="0.45"/></svg>'); }
+      .glass { backdrop-filter: blur(12px) saturate(120%); background: rgba(20, 16, 32, 0.5); border: 1px solid rgba(148, 99, 255, 0.15); }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9R3F5SN96"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date());
+      gtag('config', 'G-V9R3F5SN96');
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8841361268363979"
+      crossorigin="anonymous"></script>
+  </head>
+  <body class="min-h-full text-zinc-100 antialiased">
+    <div class="noise"></div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-zinc-950 via-zinc-950/95 to-zinc-900"></div>
+    <div class="absolute inset-0 -z-10 bg-glow"></div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:glass/0">
+      <div class="glass">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="flex h-16 items-center justify-between">
+            <a href="#home" class="group inline-flex items-center gap-3">
+              <div class="h-8 w-8 rounded-lg bg-brand-600/20 ring-1 ring-brand-500/40 grid place-items-center">
+                <span class="text-brand-300 font-mono text-sm">HΞP</span>
+              </div>
+              <span class="font-semibold tracking-tight">bloodmoney2.fun</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm">
+              <a href="#about" class="hover:text-brand-200 transition-colors">About</a>
+              <a href="#gameplay" class="hover:text-brand-200 transition-colors">Gameplay</a>
+              <a href="#videos" class="hover:text-brand-200 transition-colors">Videos</a>
+              <a href="#faq" class="hover:text-brand-200 transition-colors">FAQ</a>
+              <a href="#play" class="inline-flex items-center rounded-xl bg-brand-600 px-4 py-2 font-medium shadow-soft hover:bg-brand-500 transition-colors">Play</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="relative">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 rounded-full border border-brand-500/20 bg-brand-600/10 px-3 py-1 text-xs text-brand-200">New • Released Sep 12, 2025</div>
+            <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+              BLOODMONEY 2
+              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-fuchsia-300">Human Expenditure Program</span>
+            </h1>
+            <p class="mt-6 text-base sm:text-lg text-zinc-300 leading-relaxed max-w-2xl">
+              A psychological horror simulation where every choice tests morality, responsibility, and empathy. Care for Harvey Harvington inside a twisted virtual program—cute on the surface, unsettling underneath.
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#play" class="inline-flex items-center justify-center rounded-2xl bg-brand-600 px-6 py-3 text-base font-semibold shadow-soft hover:bg-brand-500 transition-colors">Play in Browser</a>
+              <a href="#about" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-base font-semibold hover:bg-white/10 transition-colors">Learn More</a>
+            </div>
+            <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-zinc-400">
+              <div class="glass rounded-xl p-3"><div class="text-zinc-200 font-medium">Platform</div><div>Web (PC recommended)</div></div>
+              <div class="glass rounded-xl p-3"><div class="text-zinc-200 font-medium">Endings</div><div>2 branching finales</div></div>
+              <div class="glass rounded-xl p-3"><div class="text-zinc-200 font-medium">Minigames</div><div>5 unique challenges</div></div>
+              <div class="glass rounded-xl p-3"><div class="text-zinc-200 font-medium">Warning</div><div>Flashing lights</div></div>
+            </div>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="relative">
+              <div class="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-brand-500/20 to-fuchsia-500/20 blur-2xl"></div>
+              <div class="glass rounded-3xl p-3 border border-white/10">
+                <div class="relative aspect-video w-full overflow-hidden rounded-2xl ring-1 ring-white/10 bg-black">
+                  <div class="absolute inset-0 bg-[url('/assets/bloodmoney2-hero.jpg')] bg-cover bg-center"></div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  <div class="relative p-6 text-center grid place-items-center h-full">
+                    <p class="text-sm text-zinc-200">Instant Play</p>
+                    <p class="mt-1 text-xs text-zinc-300">Click the button below to load the game.</p>
+                    <a href="#play" class="mt-5 inline-flex items-center rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold shadow-soft hover:bg-brand-500 transition-colors">Launch Now</a>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3 text-[11px] text-zinc-500">Created by <span class="text-zinc-300">SHROOMYCHRIST</span>. Unofficial fan site for instant web play.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Play Section -->
+    <section id="play" class="scroll-mt-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24">
+        <div class="flex items-end justify-between gap-4 mb-4">
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Play BLOODMONEY 2 in your browser</h2>
+          <div class="hidden sm:flex items-center gap-2 text-xs text-zinc-400">
+            <span class="rounded-full border border-white/10 px-2 py-1">Best on desktop</span>
+            <span class="rounded-full border border-white/10 px-2 py-1">Photosensitive warning</span>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-brand-500/20 to-fuchsia-500/10 blur-xl"></div>
+          <div id="game-shell" class="glass rounded-3xl p-2 sm:p-3">
+            <div class="flex items-center justify-between gap-2 p-2 sm:p-3">
+              <div class="flex items-center gap-2 text-xs text-zinc-400">
+                <span class="inline-flex h-2 w-2 rounded-full bg-rose-500"></span>
+                <span class="inline-flex h-2 w-2 rounded-full bg-amber-500"></span>
+                <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                <span class="ml-2 hidden sm:inline">Embedded Game</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button id="fs-btn" class="rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium hover:bg-white/10">Fullscreen</button>
+                <a href="https://html-classic.itch.zone/html/14943229/index.html" target="_blank" rel="noopener" class="rounded-lg bg-brand-600 px-3 py-1.5 text-xs font-semibold hover:bg-brand-500">Open in New Tab</a>
+              </div>
+            </div>
+            <div class="aspect-video w-full overflow-hidden rounded-2xl ring-1 ring-white/10 bg-black">
+              <iframe
+                id="game-frame"
+                src="https://html-classic.itch.zone/html/14943229/index.html"
+                title="BLOODMONEY 2 – Human Expenditure Program"
+                class="h-full w-full"
+                allow="fullscreen; autoplay; gamepad; clipboard-read; clipboard-write"
+                referrerpolicy="no-referrer"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-[11px] text-zinc-500">If the game does not load, click “Open in New Tab.”</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-12 sm:py-16 lg:py-24">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">About BLOODMONEY 2 (Human Expenditure Program)</h2>
+        <p class="mt-4 text-zinc-300 leading-relaxed">
+          BLOODMONEY 2, also known as Human Expenditure Program, is a psychological horror simulation mixing suspense, drama, and ethical dilemmas. Released on Sep 12, 2025 by SHROOMYCHRIST on itch, the game follows Harvey Harvington through cute visuals and dark undertones. Every choice tests morality, responsibility, and empathy, while minigames and Eun‑Mi’s presence shape the story. Explore this twisted virtual pet experience and uncover hidden truths—play now and face the consequences of your decisions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gameplay Highlights -->
+    <section id="gameplay" class="pb-12 sm:pb-16 lg:pb-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+          <div class="glass rounded-3xl p-6">
+            <h3 class="text-xl font-semibold">Unlock the Core Story</h3>
+            <p class="mt-3 text-zinc-300 leading-relaxed">Harvey Harvington exists as a lost program under his wife, Eun‑Mi Harvington, guiding the Human Expenditure Program. Uncover his tragic past through interactions and mini‑games. Your choices create suspense and moral tension, confronting themes of guilt and responsibility.</p>
+            <ul class="mt-4 grid gap-2 text-sm text-zinc-300 list-disc pl-5">
+              <li>Two possible endings shaped by your ethics</li>
+              <li>Five minigames that earn money and reveal fragments</li>
+              <li>Feeding and sleep management affecting mood and outcomes</li>
+            </ul>
+          </div>
+          <div class="glass rounded-3xl p-6">
+            <h3 class="text-xl font-semibold">Gameplay: Be Eun‑Mi to take care of Harvey</h3>
+            <ul class="mt-3 space-y-2 text-zinc-300 text-sm">
+              <li>Play five unique minigames to influence Harvey’s mood and the narrative.</li>
+              <li>Feed Harvey with candy, bread, donut, pie, cake, or a big salad to affect well‑being.</li>
+              <li>Manage sleep for memory reconstruction and readiness.</li>
+              <li>Simple controls: play entirely with your mouse button.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 grid lg:grid-cols-3 gap-6">
+          <div class="glass rounded-2xl p-5">
+            <div class="text-sm text-zinc-400">Mode</div>
+            <div class="mt-1 font-semibold">Psychological horror simulation</div>
+          </div>
+          <div class="glass rounded-2xl p-5">
+            <div class="text-sm text-zinc-400">Replayability</div>
+            <div class="mt-1 font-semibold">Branching choices & two endings</div>
+          </div>
+          <div class="glass rounded-2xl p-5">
+            <div class="text-sm text-zinc-400">Aesthetic</div>
+            <div class="mt-1 font-semibold">Retro‑cute visuals with dark undertones</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Videos -->
+    <section id="videos" class="pb-12 sm:pb-16 lg:pb-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Community Videos</h2>
+        <p class="mt-2 text-sm text-zinc-400">Curated playthroughs and analysis from creators. Videos open inline; sound is off by default per your browser settings.</p>
+
+        <div class="mt-6 grid gap-8 lg:grid-cols-3">
+          <!-- Video 1 -->
+          <article class="glass rounded-2xl p-3">
+            <div class="aspect-video w-full overflow-hidden rounded-xl ring-1 ring-white/10 bg-black">
+              <iframe class="h-full w-full" width="560" height="315" src="https://www.youtube.com/embed/8fAK-pB__rM?si=dh9nRi_yKylgt2y9" title="Harvey is Back in Bloodmoney 2 || Human Expenditure Program (Full Game ALL ENDINGS)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold">Harvey is Back in Bloodmoney 2 || Human Expenditure Program (Full Game ALL ENDINGS)</h3>
+            <p class="mt-1 text-xs text-zinc-400">SuperHorrorBro • 5,6476 views • Sep 14, 2025</p>
+            <p class="mt-2 text-xs text-zinc-300">Sequel deep‑dive covering all endings and the disturbing backstory of Harvey inside the simulation.</p>
+          </article>
+
+          <!-- Video 2 -->
+          <article class="glass rounded-2xl p-3">
+            <div class="aspect-video w-full overflow-hidden rounded-xl ring-1 ring-white/10 bg-black">
+              <iframe class="h-full w-full" width="560" height="315" src="https://www.youtube.com/embed/iC_tX60kmrA?si=h6Ke6Zny9BDp-D1K" title="IS SAVING HARVEY POSSIBLE!? | Human Expenditure Program Gameplay (Mods)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold">IS SAVING HARVEY POSSIBLE!? | Human Expenditure Program Gameplay (Mods)</h3>
+            <p class="mt-1 text-xs text-zinc-400">124,508 views • Sep 17, 2025 • #dakblake</p>
+            <p class="mt-2 text-xs text-zinc-300">Can Harvey be saved? A modded exploration that even peeks into the files for hidden answers.</p>
+          </article>
+
+          <!-- Video 3 -->
+          <article class="glass rounded-2xl p-3">
+            <div class="aspect-video w-full overflow-hidden rounded-xl ring-1 ring-white/10 bg-black">
+              <iframe class="h-full w-full" width="560" height="315" src="https://www.youtube.com/embed/HT-TYBT-K04?si=G6Ahkkrj-90-P1FS" title="BLOODMONEY 2 SECRET ENDING & HIDDEN FILES YOU HAVENT SEEN.. (HUMAN EXPENDITURE PROGRAM)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <h3 class="mt-3 text-sm font-semibold">BLOODMONEY 2 SECRET ENDING & HIDDEN FILES YOU HAVENT SEEN.. (HUMAN EXPENDITURE PROGRAM)</h3>
+            <p class="mt-1 text-xs text-zinc-400">Creator video • 2025</p>
+            <p class="mt-2 text-xs text-zinc-300">Secret ending theories, hidden files, and new findings across the community.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="pb-20">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Frequently Asked Questions</h2>
+        <div class="mt-6 space-y-4">
+          <details class="glass rounded-2xl p-5" open>
+            <summary class="cursor-pointer text-base font-semibold">Is BLOODMONEY 2 free to play?</summary>
+            <p class="mt-3 text-zinc-300 text-sm">Yes. You can play for free here in your browser. The original release uses a pay‑what‑you‑want model on itch.</p>
+          </details>
+          <details class="glass rounded-2xl p-5">
+            <summary class="cursor-pointer text-base font-semibold">Do I need to download anything?</summary>
+            <p class="mt-3 text-zinc-300 text-sm">No downloads are required. Click “Play” and the game loads instantly in an embedded frame.</p>
+          </details>
+          <details class="glass rounded-2xl p-5">
+            <summary class="cursor-pointer text-base font-semibold">What is the goal?</summary>
+            <p class="mt-3 text-zinc-300 text-sm">Discover the dark truth behind Harvey’s memories and confront your responsibility. Your choices lead to one of two endings.</p>
+          </details>
+          <details class="glass rounded-2xl p-5">
+            <summary class="cursor-pointer text-base font-semibold">Photosensitivity warning</summary>
+            <p class="mt-3 text-zinc-300 text-sm">This game contains flashing lights. If you are photosensitive, do not play.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social / Dev Links -->
+    <section class="pb-16">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="glass rounded-3xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-semibold">Follow the developer</h3>
+            <p class="text-sm text-zinc-300">SHROOMYCHRIST shares updates and videos:</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="https://x.com/shroomychrist" target="_blank" rel="noopener" class="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium hover:bg-white/10">X (Twitter)</a>
+            <a href="https://www.youtube.com/@shroomy__rxcks" target="_blank" rel="noopener" class="rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold hover:bg-brand-500">YouTube</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="border-t border-white/10 bg-black/20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-400">
+          <p>© <span id="year"></span> bloodmoney2.fun. Unofficial fan site. All trademarks belong to their respective owners.</p>
+          <nav class="flex items-center gap-4">
+            <a href="#play" class="hover:text-zinc-200">Play</a>
+            <a href="#about" class="hover:text-zinc-200">About</a>
+            <a href="#faq" class="hover:text-zinc-200">FAQ</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scroll offset for sticky header
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const targetId = link.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+          const el = document.querySelector(targetId);
+          if (!el) return;
+          e.preventDefault();
+          const y = el.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        });
+      });
+
+      // Fullscreen for the game container
+      const fsBtn = document.getElementById('fs-btn');
+      const gameShell = document.getElementById('game-shell');
+      fsBtn?.addEventListener('click', async () => {
+        try {
+          if (!document.fullscreenElement) {
+            await gameShell.requestFullscreen();
+            fsBtn.textContent = 'Exit Fullscreen';
+          } else {
+            await document.exitFullscreen();
+            fsBtn.textContent = 'Fullscreen';
+          }
+        } catch (err) {
+          console.warn('Fullscreen error', err);
+        }
+      });
+
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html> 
